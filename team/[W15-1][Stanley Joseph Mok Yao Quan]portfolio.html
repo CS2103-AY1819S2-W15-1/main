@@ -152,7 +152,7 @@
 === Making available/washing a piece of apparel : <code>available</code> or <code>wash</code></p>
 </div>
 <div class="paragraph">
-<p>Makes an existing apparel in the address book available.<br>
+<p>Makes an existing apparel in FM available.<br>
 Format: <code>wash INDEX</code> or <code>available INDEX</code></p>
 </div>
 <div class="sidebarblock">
@@ -160,7 +160,7 @@ Format: <code>wash INDEX</code> or <code>available INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Makes available the person at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed person list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+<p>Makes available the apparel at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed apparel list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
 <p>Apparel will be made available whether it was available or unavailable before the command.</p>
@@ -187,7 +187,7 @@ Makes available the 2nd apparel in the list.</p>
 <div class="sect2">
 <h3 id="making-unavailable-dirty-a-piece-of-apparel-code-unavailable-code-or-code-dirty-code"><a class="link" href="#making-unavailable-dirty-a-piece-of-apparel-code-unavailable-code-or-code-dirty-code">Making unavailable/dirty a piece of apparel : <code>unavailable</code> or <code>dirty</code></a></h3>
 <div class="paragraph">
-<p>Makes an existing apparel in the address book available.<br>
+<p>Makes an existing apparel in FM unavailable.<br>
 Format: <code>dirty INDEX</code> or <code>unavailable INDEX</code></p>
 </div>
 <div class="sidebarblock">
@@ -195,7 +195,7 @@ Format: <code>dirty INDEX</code> or <code>unavailable INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Makes unavailable the person at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed person list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+<p>Makes unavailable the apparel at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed apparel list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
 <p>Apparel will be made unavailable whether it was available or unavailable before the command.</p>
@@ -246,7 +246,7 @@ Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 <p>Only full words will be matched e.g. <code>Nice</code> will not match <code>Nices</code></p>
 </li>
 <li>
-<p>Persons matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Tim Tam</code> will return <code>Tim</code>, <code>Higgy Tam</code></p>
+<p>Apparels matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Zara Uniqlo</code> will return <code>Zara Belt</code>, <code>Uniqlo shoes</code></p>
 </li>
 </ul>
 </div>
@@ -262,16 +262,16 @@ Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 Returns <code>zara</code> and <code>Zara</code></p>
 </li>
 <li>
-<p><code>find Tim Tam Battle Plan</code><br>
-Returns any person having names <code>Tim</code>, <code>Tam</code>,<code>Battle</code> or <code>Plan</code>.</p>
+<p><code>find Zara Uniqlo Shirt</code><br>
+Returns any apparel having names <code>Zara</code>, <code>Uniqlo</code> or <code>Shirt</code>.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">Deleting a person : <code>delete</code></a></h3>
+<h3 id="deleting-an-apparel-code-delete-code"><a class="link" href="#deleting-an-apparel-code-delete-code">Deleting an apparel : <code>delete</code></a></h3>
 <div class="paragraph">
-<p>Deletes the specified person from the address book.<br>
+<p>Deletes the specified apparel from FM.<br>
 Format: <code>delete INDEX</code></p>
 </div>
 <div class="sidebarblock">
@@ -279,10 +279,10 @@ Format: <code>delete INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Deletes the person at the specified <code>INDEX</code>.</p>
+<p>Deletes the apparel at the specified <code>INDEX</code>.</p>
 </li>
 <li>
-<p>The index refers to the index number shown in the displayed person list.</p>
+<p>The index refers to the index number shown in the displayed apparel list.</p>
 </li>
 <li>
 <p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
@@ -299,20 +299,20 @@ Format: <code>delete INDEX</code></p>
 <li>
 <p><code>list</code><br>
 <code>delete 2</code><br>
-Deletes the 2nd person in the address book.</p>
+Deletes the 2nd apparel in FM.</p>
 </li>
 <li>
-<p><code>find Betsy</code><br>
+<p><code>find Uniqlo</code><br>
 <code>delete 1</code><br>
-Deletes the 1st person in the results of the <code>find</code> command.</p>
+Deletes the 1st apparel in the results of the <code>find</code> command.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">Selecting a person : <code>select</code></a></h3>
+<h3 id="selecting-a-apparel-code-select-code"><a class="link" href="#selecting-a-apparel-code-select-code">Selecting a apparel : <code>select</code></a></h3>
 <div class="paragraph">
-<p>Selects the person identified by the index number used in the displayed person list.<br>
+<p>Selects the apparel identified by the index number used in the displayed apparel list.<br>
 Format: <code>select INDEX</code></p>
 </div>
 <div class="sidebarblock">
@@ -320,10 +320,10 @@ Format: <code>select INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Selects the person and loads the Google search page the person at the specified <code>INDEX</code>.</p>
+<p>Selects the apparel and loads a picture of the apparel at the specified <code>INDEX</code>.</p>
 </li>
 <li>
-<p>The index refers to the index number shown in the displayed person list.</p>
+<p>The index refers to the index number shown in the displayed apparel list.</p>
 </li>
 <li>
 <p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
@@ -340,12 +340,12 @@ Format: <code>select INDEX</code></p>
 <li>
 <p><code>list</code><br>
 <code>select 2</code><br>
-Selects the 2nd person in the address book.</p>
+Selects the 2nd apparel in FM.</p>
 </li>
 <li>
-<p><code>find Betsy</code><br>
+<p><code>find Uniqlo</code><br>
 <code>select 1</code><br>
-Selects the 1st person in the results of the <code>find</code> command.</p>
+Selects the 1st apparel in the results of the <code>find</code> command.</p>
 </li>
 </ul>
 </div>
@@ -374,7 +374,7 @@ Format: <code>history</code></p>
 <div class="sect2">
 <h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
-<p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
+<p>Restores FM to the state before the previous <em>undoable</em> command was executed.<br>
 Format: <code>undo</code></p>
 </div>
 <div class="admonitionblock note">
@@ -385,7 +385,7 @@ Format: <code>undo</code></p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Undoable commands: those commands that modify the address book&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>).</p>
+<p>Undoable commands: those commands that modify the FM&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>).</p>
 </div>
 </td>
 </tr>
@@ -451,21 +451,21 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 <div class="sect2">
 <h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
-<p>Clears all entries from the address book.<br>
+<p>Clears all entries from FM.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="recommend-outfit"><a class="link" href="#recommend-outfit">Recommend Outfit</a></h3>
 <div class="paragraph">
-<p>Lists a recommended outfit based on what matches in your closet. The outfit must have a TOP,BOTTOM,SHOES. If a matching belt exists an outfit may be recommended with a BELT.<br>
+<p>Lists a recommended outfit based on what matches in your closet. The outfit must have a <code>TOP</code>, <code>BOTTOM</code>, <code>SHOES</code>. If a matching belt exists, an outfit may be recommended with a BELT.<br>
 Format: <code>recommendation</code></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="something-color-select"><a class="link" href="#something-color-select">Something Color Select</a></h3>
 <div class="paragraph">
-<p>Returns random clothing of specified COLOR from address book.<br>
+<p>Returns random apparel of specified COLOR FM.<br>
 Format: <code>something COLOR</code></p>
 </div>
 <div class="sidebarblock">
@@ -473,10 +473,10 @@ Format: <code>something COLOR</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Returns random clothing from specified <code>COLOR</code>.</p>
+<p>Returns random apparel from specified <code>COLOR</code>.</p>
 </li>
 <li>
-<p>The color refers to the color of clothing.</p>
+<p>The color refers to the color of apparel.</p>
 </li>
 <li>
 <p>The color <strong>must be a one of</strong> RED, BLUE, GREEN, WHITE, BLACK, &#8230;&#8203;</p>
@@ -492,11 +492,11 @@ Format: <code>something COLOR</code></p>
 <ul>
 <li>
 <p><code>something RED</code><br>
-Returns a RED item from the address book.</p>
+Returns a RED apparel from FM.</p>
 </li>
 <li>
 <p><code>something BLACK</code><br>
-Returns a BLACK item from the address book.</p>
+Returns a BLACK apparel from FM.</p>
 </li>
 </ul>
 </div>
@@ -504,7 +504,7 @@ Returns a BLACK item from the address book.</p>
 <div class="sect2">
 <h3 id="random-item-type-select"><a class="link" href="#random-item-type-select">Random Item Type Select</a></h3>
 <div class="paragraph">
-<p>Returns random specified TYPE of clothing from address book.<br>
+<p>Returns random specified TYPE of apparel from FM.<br>
 Format: <code>random TYPE</code></p>
 </div>
 <div class="sidebarblock">
@@ -512,13 +512,13 @@ Format: <code>random TYPE</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Returns random clothing from specified <code>TYPE</code>.</p>
+<p>Returns random apparel from specified <code>TYPE</code>.</p>
 </li>
 <li>
-<p>The type refers to the type of clothing.</p>
+<p>The type refers to the type of apparel.</p>
 </li>
 <li>
-<p>The type <strong>must be a one of</strong> TOP, BOTTOM, BELT, SHOES</p>
+<p>The type <strong>must be a one of</strong> <code>TOP</code>, <code>BOTTOM</code>, <code>BELT</code>, <code>SHOES</code></p>
 </li>
 </ul>
 </div>
@@ -531,11 +531,11 @@ Format: <code>random TYPE</code></p>
 <ul>
 <li>
 <p><code>random TOP</code><br>
-Returns a random TOP in the address book.</p>
+Returns a random TOP in FM.</p>
 </li>
 <li>
 <p><code>random BOTTOM</code><br>
-Returns a random BOTTOM in the address book.</p>
+Returns a random BOTTOM in FM.</p>
 </li>
 </ul>
 </div>
@@ -543,7 +543,7 @@ Returns a random BOTTOM in the address book.</p>
 <div class="sect2">
 <h3 id="calculating-use-statistics-code-coming-in-v4-0-code"><a class="link" href="#calculating-use-statistics-code-coming-in-v4-0-code">Calculating use Statistics <code>[coming in v4.0]</code></a></h3>
 <div class="paragraph">
-<p>Calculates the rate of wear of each clothes.</p>
+<p>Calculates the rate of wear of each apparel.</p>
 </div>
 </div>
 <div class="sect2">
@@ -556,7 +556,7 @@ Format: <code>exit</code></p>
 <div class="sect2">
 <h3 id="saving-the-data"><a class="link" href="#saving-the-data">Saving the data</a></h3>
 <div class="paragraph">
-<p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
+<p>FM data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
@@ -567,7 +567,7 @@ There is no need to save manually.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
-<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Address Book folder.</p>
+<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous FM folder.</p>
 </div>
 </div>
 </div>
@@ -632,7 +632,7 @@ e.g. <code>color RED</code></p>
 === Making unavailable/dirty a piece of apparel : <code>unavailable</code> or <code>dirty</code></p>
 </div>
 <div class="paragraph">
-<p>Makes an existing apparel in the address book available.<br>
+<p>Makes an existing apparel in FM unavailable.<br>
 Format: <code>dirty INDEX</code> or <code>unavailable INDEX</code></p>
 </div>
 <div class="sidebarblock">
@@ -640,7 +640,7 @@ Format: <code>dirty INDEX</code> or <code>unavailable INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Makes unavailable the person at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed person list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+<p>Makes unavailable the apparel at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed apparel list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
 <p>Apparel will be made unavailable whether it was available or unavailable before the command.</p>
@@ -690,7 +690,7 @@ Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 <p>Only full words will be matched e.g. <code>Nice</code> will not match <code>Nices</code></p>
 </li>
 <li>
-<p>Persons matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Tim Tam</code> will return <code>Tim</code>, <code>Higgy Tam</code></p>
+<p>Apparels matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Zara Uniqlo</code> will return <code>Zara Belt</code>, <code>Uniqlo shoes</code></p>
 </li>
 </ul>
 </div>
@@ -706,16 +706,16 @@ Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 Returns <code>zara</code> and <code>Zara</code></p>
 </li>
 <li>
-<p><code>find Tim Tam Battle Plan</code><br>
-Returns any person having names <code>Tim</code>, <code>Tam</code>,<code>Battle</code> or <code>Plan</code>.</p>
+<p><code>find Zara Uniqlo Shirt</code><br>
+Returns any apparel having names <code>Zara</code>, <code>Uniqlo</code> or <code>Shirt</code>.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person-code-delete-code-2"><a class="link" href="#deleting-a-person-code-delete-code-2">Deleting a person : <code>delete</code></a></h3>
+<h3 id="deleting-an-apparel-code-delete-code-2"><a class="link" href="#deleting-an-apparel-code-delete-code-2">Deleting an apparel : <code>delete</code></a></h3>
 <div class="paragraph">
-<p>Deletes the specified person from the address book.<br>
+<p>Deletes the specified apparel from FM.<br>
 Format: <code>delete INDEX</code></p>
 </div>
 <div class="sidebarblock">
@@ -723,10 +723,10 @@ Format: <code>delete INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Deletes the person at the specified <code>INDEX</code>.</p>
+<p>Deletes the apparel at the specified <code>INDEX</code>.</p>
 </li>
 <li>
-<p>The index refers to the index number shown in the displayed person list.</p>
+<p>The index refers to the index number shown in the displayed apparel list.</p>
 </li>
 <li>
 <p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
@@ -743,20 +743,20 @@ Format: <code>delete INDEX</code></p>
 <li>
 <p><code>list</code><br>
 <code>delete 2</code><br>
-Deletes the 2nd person in the address book.</p>
+Deletes the 2nd apparel in FM.</p>
 </li>
 <li>
-<p><code>find Betsy</code><br>
+<p><code>find Uniqlo</code><br>
 <code>delete 1</code><br>
-Deletes the 1st person in the results of the <code>find</code> command.</p>
+Deletes the 1st apparel in the results of the <code>find</code> command.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="selecting-a-person-code-select-code-2"><a class="link" href="#selecting-a-person-code-select-code-2">Selecting a person : <code>select</code></a></h3>
+<h3 id="selecting-a-apparel-code-select-code-2"><a class="link" href="#selecting-a-apparel-code-select-code-2">Selecting a apparel : <code>select</code></a></h3>
 <div class="paragraph">
-<p>Selects the person identified by the index number used in the displayed person list.<br>
+<p>Selects the apparel identified by the index number used in the displayed apparel list.<br>
 Format: <code>select INDEX</code></p>
 </div>
 <div class="sidebarblock">
@@ -764,10 +764,10 @@ Format: <code>select INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Selects the person and loads the Google search page the person at the specified <code>INDEX</code>.</p>
+<p>Selects the apparel and loads a picture of the apparel at the specified <code>INDEX</code>.</p>
 </li>
 <li>
-<p>The index refers to the index number shown in the displayed person list.</p>
+<p>The index refers to the index number shown in the displayed apparel list.</p>
 </li>
 <li>
 <p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
@@ -784,12 +784,12 @@ Format: <code>select INDEX</code></p>
 <li>
 <p><code>list</code><br>
 <code>select 2</code><br>
-Selects the 2nd person in the address book.</p>
+Selects the 2nd apparel in FM.</p>
 </li>
 <li>
-<p><code>find Betsy</code><br>
+<p><code>find Uniqlo</code><br>
 <code>select 1</code><br>
-Selects the 1st person in the results of the <code>find</code> command.</p>
+Selects the 1st apparel in the results of the <code>find</code> command.</p>
 </li>
 </ul>
 </div>
@@ -818,7 +818,7 @@ Format: <code>history</code></p>
 <div class="sect2">
 <h3 id="undoing-previous-command-code-undo-code-2"><a class="link" href="#undoing-previous-command-code-undo-code-2">Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
-<p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
+<p>Restores FM to the state before the previous <em>undoable</em> command was executed.<br>
 Format: <code>undo</code></p>
 </div>
 <div class="admonitionblock note">
@@ -829,7 +829,7 @@ Format: <code>undo</code></p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Undoable commands: those commands that modify the address book&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>).</p>
+<p>Undoable commands: those commands that modify the FM&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>).</p>
 </div>
 </td>
 </tr>
@@ -895,21 +895,21 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 <div class="sect2">
 <h3 id="clearing-all-entries-code-clear-code-2"><a class="link" href="#clearing-all-entries-code-clear-code-2">Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
-<p>Clears all entries from the address book.<br>
+<p>Clears all entries from FM.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="recommend-outfit-2"><a class="link" href="#recommend-outfit-2">Recommend Outfit</a></h3>
 <div class="paragraph">
-<p>Lists a recommended outfit based on what matches in your closet. The outfit must have a TOP,BOTTOM,SHOES. If a matching belt exists an outfit may be recommended with a BELT.<br>
+<p>Lists a recommended outfit based on what matches in your closet. The outfit must have a <code>TOP</code>, <code>BOTTOM</code>, <code>SHOES</code>. If a matching belt exists, an outfit may be recommended with a BELT.<br>
 Format: <code>recommendation</code></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="something-color-select-2"><a class="link" href="#something-color-select-2">Something Color Select</a></h3>
 <div class="paragraph">
-<p>Returns random clothing of specified COLOR from address book.<br>
+<p>Returns random apparel of specified COLOR FM.<br>
 Format: <code>something COLOR</code></p>
 </div>
 <div class="sidebarblock">
@@ -917,10 +917,10 @@ Format: <code>something COLOR</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Returns random clothing from specified <code>COLOR</code>.</p>
+<p>Returns random apparel from specified <code>COLOR</code>.</p>
 </li>
 <li>
-<p>The color refers to the color of clothing.</p>
+<p>The color refers to the color of apparel.</p>
 </li>
 <li>
 <p>The color <strong>must be a one of</strong> RED, BLUE, GREEN, WHITE, BLACK, &#8230;&#8203;</p>
@@ -936,11 +936,11 @@ Format: <code>something COLOR</code></p>
 <ul>
 <li>
 <p><code>something RED</code><br>
-Returns a RED item from the address book.</p>
+Returns a RED apparel from FM.</p>
 </li>
 <li>
 <p><code>something BLACK</code><br>
-Returns a BLACK item from the address book.</p>
+Returns a BLACK apparel from FM.</p>
 </li>
 </ul>
 </div>
@@ -948,7 +948,7 @@ Returns a BLACK item from the address book.</p>
 <div class="sect2">
 <h3 id="random-item-type-select-2"><a class="link" href="#random-item-type-select-2">Random Item Type Select</a></h3>
 <div class="paragraph">
-<p>Returns random specified TYPE of clothing from address book.<br>
+<p>Returns random specified TYPE of apparel from FM.<br>
 Format: <code>random TYPE</code></p>
 </div>
 <div class="sidebarblock">
@@ -956,13 +956,13 @@ Format: <code>random TYPE</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Returns random clothing from specified <code>TYPE</code>.</p>
+<p>Returns random apparel from specified <code>TYPE</code>.</p>
 </li>
 <li>
-<p>The type refers to the type of clothing.</p>
+<p>The type refers to the type of apparel.</p>
 </li>
 <li>
-<p>The type <strong>must be a one of</strong> TOP, BOTTOM, BELT, SHOES</p>
+<p>The type <strong>must be a one of</strong> <code>TOP</code>, <code>BOTTOM</code>, <code>BELT</code>, <code>SHOES</code></p>
 </li>
 </ul>
 </div>
@@ -975,11 +975,11 @@ Format: <code>random TYPE</code></p>
 <ul>
 <li>
 <p><code>random TOP</code><br>
-Returns a random TOP in the address book.</p>
+Returns a random TOP in FM.</p>
 </li>
 <li>
 <p><code>random BOTTOM</code><br>
-Returns a random BOTTOM in the address book.</p>
+Returns a random BOTTOM in FM.</p>
 </li>
 </ul>
 </div>
@@ -987,7 +987,7 @@ Returns a random BOTTOM in the address book.</p>
 <div class="sect2">
 <h3 id="calculating-use-statistics-code-coming-in-v4-0-code-2"><a class="link" href="#calculating-use-statistics-code-coming-in-v4-0-code-2">Calculating use Statistics <code>[coming in v4.0]</code></a></h3>
 <div class="paragraph">
-<p>Calculates the rate of wear of each clothes.</p>
+<p>Calculates the rate of wear of each apparel.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1000,7 +1000,7 @@ Format: <code>exit</code></p>
 <div class="sect2">
 <h3 id="saving-the-data-2"><a class="link" href="#saving-the-data-2">Saving the data</a></h3>
 <div class="paragraph">
-<p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
+<p>FM data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
@@ -1011,7 +1011,7 @@ There is no need to save manually.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
-<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Address Book folder.</p>
+<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous FM folder.</p>
 </div>
 </div>
 </div>
@@ -1101,4 +1101,4 @@ Set availability status to unavailable.
 <em>{More to be added}</em></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-06 06:48:45 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-06 07:40:04 UTC</div></div></div></body></html>
