@@ -32,7 +32,7 @@
 <li><a href="#wash-feature">3.1. Wash feature</a></li>
 <li><a href="#wear-feature">3.2. Wear feature</a></li>
 <li><a href="#sort-apparel-feature">3.3. Sort Apparel feature</a></li>
-<li><a href="#sort-apparel-feature-2">3.4. Sort Apparel feature</a></li>
+<li><a href="#swap-apparel-feature">3.4. Swap Apparel feature</a></li>
 <li><a href="#recommendation-clothes-feature">3.5. Recommendation Clothes feature</a></li>
 <li><a href="#random-select-feature">3.6. Random Select feature</a></li>
 <li><a href="#statistics-feature">3.7. Statistics feature</a></li>
@@ -755,10 +755,39 @@ Simulating an event in the real world where users arrange their wardrobe accordi
 <div class="paragraph">
 <p>LogicManager executes SortCommand which calls Model to sort the apparels in the list by color, and commits the changes to Storage.</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="images/SortCommandSequenceDiagram.png" alt="SortCommandSequenceDiagram" width="800">
+</div>
+<div class="title">Figure 14. Sequence Diagram for Sort command</div>
+</div>
+<div class="paragraph">
+<p>The CommandResult object that is returned by the sort command lets the user know that the apparels have been sorted according to the specified option.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.3.2. Design Considerations:</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternate command word: <code>sort name desc</code> works similar to <code>sort name</code> except that it sorts in descending order of the apparel&#8217;s name.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Pros: Give the users more flexibility on how they want to sort the apparels.
+Pros: Simulates the real world where people might to sort the apparels in reverse order.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="proposed-additions-for-v2-0-3"><a class="link" href="#proposed-additions-for-v2-0-3">3.3.3. Proposed additions for v2.0:</a></h4>
+<div class="paragraph">
+<p>A sort command that is able to sort the apparels by multiple parameters. e.g. <code>sort color name type</code> to sort the apparels by type first, followed by name second, and lastly by color.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="sort-apparel-feature-2"><a class="link" href="#sort-apparel-feature-2">3.4. Sort Apparel feature</a></h3>
+<h3 id="swap-apparel-feature"><a class="link" href="#swap-apparel-feature">3.4. Swap Apparel feature</a></h3>
 <div class="paragraph">
 <p>Swap any two apparels.
 Simulating an event in the real world where users swap the position of two apparels.</p>
@@ -780,6 +809,30 @@ Simulating an event in the real world where users swap the position of two appar
 </div>
 <div class="paragraph">
 <p>e.g <code>swap 2 5</code> will swap the apparels at index 2 and 5.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/HighLevelSwapDiagram.png" alt="HighLevelSwapDiagram" width="800">
+</div>
+<div class="title">Figure 15. High Level Visualisation of Sort Command</div>
+</div>
+<div class="paragraph">
+<p>When the user inputs the swap command in the CLI, the input is parsed, and both the indexes of the apparels specified are validated.</p>
+</div>
+<div class="paragraph">
+<p><code>swap</code> keyword will call a constructor for SwapCommandParser to parse the swap parameters, <strong>1</strong> and <strong>2</strong>, creating a SwapCommand for LogicManager.</p>
+</div>
+<div class="paragraph">
+<p>LogicManager executes SwapCommand which calls Model to swap the position of apprels in index <strong>1</strong> and <strong>2</strong>, and commits the changes to Storage.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/SwapCommandSequenceDiagram.png" alt="SwapCommandSequenceDiagram" width="800">
+</div>
+<div class="title">Figure 16. Sequence Diagram for Swap command</div>
+</div>
+<div class="paragraph">
+<p>The CommandResult object that is returned by the swap command lets the user know that the position of the two apparels specified have been swapped.</p>
 </div>
 </div>
 </div>
@@ -810,7 +863,7 @@ Below is a high level visualisation of the statistics command and a step-by-step
 <div class="content">
 <img src="images/HighLevelStatsDiagram.png" alt="HighLevelStatsDiagram" width="800">
 </div>
-<div class="title">Figure 14. High Level Visualisation of Statistics Command</div>
+<div class="title">Figure 17. High Level Visualisation of Statistics Command</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -838,7 +891,7 @@ Below is a high level visualisation of the statistics command and a step-by-step
 <div class="content">
 <img src="images/StatisticsCommand.png" alt="StatisticsCommand" width="1000">
 </div>
-<div class="title">Figure 15. Sequence Diagram for Statistics command</div>
+<div class="title">Figure 18. Sequence Diagram for Statistics command</div>
 </div>
 <div class="paragraph">
 <p>The following is an activity diagram that sums up the Statistics command:</p>
@@ -847,10 +900,10 @@ Below is a high level visualisation of the statistics command and a step-by-step
 <div class="content">
 <img src="images/StatisticsActivityDiagram.png" alt="StatisticsActivityDiagram" width="800">
 </div>
-<div class="title">Figure 16. Activity Diagram for Statistics command</div>
+<div class="title">Figure 19. Activity Diagram for Statistics command</div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.7.1. Design Considerations</a></h4>
+<h4 id="design-considerations-4"><a class="link" href="#design-considerations-4">3.7.1. Design Considerations</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -883,7 +936,7 @@ Below is a high level visualisation of the statistics command and a step-by-step
 </div>
 </div>
 <div class="sect3">
-<h4 id="proposed-additions-for-v2-0-3"><a class="link" href="#proposed-additions-for-v2-0-3">3.7.2. Proposed additions for v2.0</a></h4>
+<h4 id="proposed-additions-for-v2-0-4"><a class="link" href="#proposed-additions-for-v2-0-4">3.7.2. Proposed additions for v2.0</a></h4>
 <div class="paragraph">
 <p><code>Statistics</code> command will be a real-time feature that captures the state of the user&#8217;s wardrobe and apparel in real-time and does not need to call the <code>Statistics</code> command each time. It will also occupy a dedicated space in the UI.</p>
 </div>
@@ -994,7 +1047,7 @@ Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows y
 <div class="content">
 <img src="images/chrome_save_as_pdf.png" alt="chrome save as pdf" width="300">
 </div>
-<div class="title">Figure 17. Saving documentation as PDF files in Chrome</div>
+<div class="title">Figure 20. Saving documentation as PDF files in Chrome</div>
 </div>
 </div>
 <div class="sect2">
@@ -1881,4 +1934,4 @@ Expected: Details of the statistics of the wardrobe is shown in the status messa
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 16:51:51 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 17:42:07 UTC</div></div></div></body></html>

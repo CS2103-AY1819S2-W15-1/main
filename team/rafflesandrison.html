@@ -107,20 +107,7 @@ You will find many commands implemented to manipulate the arrangement of the app
 </div>
 </li>
 <li>
-<p><strong>Minor Enhancement</strong>: added <strong>safety mechanism for clear command</strong>.</p>
-<div class="ulist">
-<ul>
-<li>
-<p><em>What it does</em>: &lt;To Be Added&gt;.</p>
-</li>
-<li>
-<p><em>Justification</em>: &lt;To Be Added&gt;.</p>
-</li>
-<li>
-<p><em>Highlights</em>: &lt;To Be Added&gt;.</p>
-</li>
-</ul>
-</div>
+<p><strong>Minor Enhancement to be added in v2</strong>: pending <strong>safety mechanism for clear command</strong>.</p>
 </li>
 <li>
 <p><strong>Other Contributions</strong>:</p>
@@ -216,6 +203,9 @@ You will find many commands implemented to manipulate the arrangement of the app
 <strong>ClothingType</strong>: [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/main/java/seedu/address/model/apparel/ClothingType.java">Functional code</a>]
 <strong>ClothingTypeTest</strong>: [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/test/java/seedu/address/model/apparel/ClothingTypeTest.java">Test code</a>]
 <strong>ClothingTypeValue</strong>: [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/main/java/seedu/address/model/apparel/ClothingType.java">Functional code</a>]
+<strong>ListCommand</strong>: [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/main/java/seedu/address/logic/commands/ListCommand.java">Functional code</a>]
+<strong>ListCommandParser</strong>: [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/main/java/seedu/address/logic/parser/ListCommandParser.java">Functional code</a>]
+<strong>ListCommandTest</strong>: [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/test/java/seedu/address/logic/commands/ListCommandTest.java">Test code</a>]
 <strong>SortCommand</strong>: [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/main/java/seedu/address/logic/commands/SortCommand.java">Functional code</a>]
 <strong>SortCommandParser</strong>: [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/main/java/seedu/address/logic/parser/SortCommandParser.java">Functional code</a>]
 <strong>SortCommandTest</strong>: [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/test/java/seedu/address/logic/commands/SortCommandTest.java">Test code</a>]
@@ -370,6 +360,85 @@ Simulating an event in the real world where users arrange their wardrobe accordi
 <div class="paragraph">
 <p>LogicManager executes SortCommand which calls Model to sort the apparels in the list by color, and commits the changes to Storage.</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/SortCommandSequenceDiagram.png" alt="SortCommandSequenceDiagram" width="800">
+</div>
+<div class="title">Figure 2. Sequence Diagram for Sort command</div>
+</div>
+<div class="paragraph">
+<p>The CommandResult object that is returned by the sort command lets the user know that the apparels have been sorted according to the specified option.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations:</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternate command word: <code>sort name desc</code> works similar to <code>sort name</code> except that it sorts in descending order of the apparel&#8217;s name.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Pros: Give the users more flexibility on how they want to sort the apparels.
+Pros: Simulates the real world where people might to sort the apparels in reverse order.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="proposed-additions-for-v2-0"><a class="link" href="#proposed-additions-for-v2-0">Proposed additions for v2.0:</a></h4>
+<div class="paragraph">
+<p>A sort command that is able to sort the apparels by multiple parameters. e.g. <code>sort color name type</code> to sort the apparels by type first, followed by name second, and lastly by color.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="swap-apparel-feature"><a class="link" href="#swap-apparel-feature">Swap Apparel feature</a></h3>
+<div class="paragraph">
+<p>Swap any two apparels.
+Simulating an event in the real world where users swap the position of two apparels.</p>
+</div>
+<div class="sect3">
+<h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">Current Implementation</a></h4>
+<div class="paragraph">
+<p>The swap command takes in two parameters: INDEX_A and INDEX_B</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Index_A  : The first apparel to be swapped.</p>
+</li>
+<li>
+<p>Index_B : The second apparel to be swapped.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>e.g <code>swap 2 5</code> will swap the apparels at index 2 and 5.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/HighLevelSwapDiagram.png" alt="HighLevelSwapDiagram" width="800">
+</div>
+<div class="title">Figure 3. High Level Visualisation of Sort Command</div>
+</div>
+<div class="paragraph">
+<p>When the user inputs the swap command in the CLI, the input is parsed, and both the indexes of the apparels specified are validated.</p>
+</div>
+<div class="paragraph">
+<p><code>swap</code> keyword will call a constructor for SwapCommandParser to parse the swap parameters, <strong>1</strong> and <strong>2</strong>, creating a SwapCommand for LogicManager.</p>
+</div>
+<div class="paragraph">
+<p>LogicManager executes SwapCommand which calls Model to swap the position of apprels in index <strong>1</strong> and <strong>2</strong>, and commits the changes to Storage.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/SwapCommandSequenceDiagram.png" alt="SwapCommandSequenceDiagram" width="800">
+</div>
+<div class="title">Figure 4. Sequence Diagram for Swap command</div>
+</div>
+<div class="paragraph">
+<p>The CommandResult object that is returned by the swap command lets the user know that the position of the two apparels specified have been swapped.</p>
+</div>
 </div>
 </div>
 </div>
@@ -382,4 +451,4 @@ Simulating an event in the real world where users arrange their wardrobe accordi
 <p><em>{Optionally, you may include other projects in your portfolio.}</em></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 16:51:51 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 17:42:07 UTC</div></div></div></body></html>
