@@ -10,19 +10,54 @@
 <h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Fashion Match is a desktop apparels matching application that recommends user the appropriate combination of apparels based on their the apparels they owned. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC.</p>
+<p>Fashion Match is a command line application that is morphed from an addressbook application. This is a Software Engineering project that required us to use their code as a base and we decided to morph it into an wardrobe management system. This application enables normal users to:
+<strong> Manage the arrangement of apparels in the wardrobe
+</strong> Wash and wear specific apparel
+<strong> Recommend outfit combination
+</strong> Usage statistics</p>
+</div>
+<div class="paragraph">
+<p>The part of Fashion Match that I implemented is the Wardrobe Management Feature which comprises of <code>list [OPTION]</code>, <code>sort [OPTION]</code>, and <code>swap [INDEX_X] [INDEX_Y]</code>. Also, I handled the display of the apparel details on the User Interface when an apparel is selected. More details about these features will be elaborated below including documentation of it in the user and developer guide.</p>
+</div>
+<div class="paragraph">
+<p><code>list all</code> : A grey highlight (called a markup) indicates that this is a command that can be input into the command line and executed by the application.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>In this section, all of my contributions will be listed in detail including my code and documentations.</p>
+</div>
+<div class="paragraph">
+<p>Within the Wardrobe Management Feature, you will find many commands implemented to manipulate the arrangement of the apparels. These include:
+* <a href="#list">List the apparels based on specific option</a>
+* <a href="#sort">Sort the apparels based on specific option</a>
+* <a href="#swap">Swap the position of any two apparels</a></p>
+</div>
+<div id="list" class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>List apparels</strong>: added <strong>the ability to list the apparels you want to see</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>What it does</em>: It lists the apparels based on a specific category.</p>
+</li>
+<li>
+<p><em>Justification</em>: This command is a fundamental feature to allow the user to limit the apparels shown on the UI. This is for easy viewing.</p>
+</li>
+<li>
+<p><em>Highlights</em>: This command takes in option and only show apparels based on the option given.</p>
 <div class="ulist">
 <ul>
 <li>
 <p><strong>Major enhancement</strong>: added the Apparel Management feature which comprises of sort and list. Sort feature allows user to sort by name, colour or clothing type. As for list, it is an improved version of the previous list feature. The new list allows user to supply options in order to list the apparels according to the parameter supplied by the user.</p>
-<div class="ulist">
-<ul>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p>What it does: allows the user sort the apparels in any valid way. To find out about the valid way of sorting, user can simply type <code>sort options</code> which output all the valid sorting options.</p>
 </li>
@@ -34,10 +69,8 @@
 </li>
 <li>
 <p>Credits: None.</p>
-</li>
-</ul>
-</div>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p><strong>Minor enhancement</strong>: added a &lt;name of command&gt; command that allows the user to &lt;Do what&gt;.</p>
 </li>
@@ -56,14 +89,19 @@
 </li>
 <li>
 <p><strong>Other contributions</strong>:</p>
-<div class="ulist">
-<ul>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p>Project management:</p>
 <div class="ulist">
 <ul>
 <li>
 <p>Set up team development environment.</p>
+</li>
+<li>
+<p>Set up travis and coverall.</p>
 </li>
 <li>
 <p>Managed releases <code>v1.1</code> (1 release) on GitHub</p>
@@ -133,7 +171,7 @@
 </ul>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 </div>
 </div>
@@ -170,6 +208,16 @@ Sort all apparels according to the option supplied.<br></p>
 <div class="paragraph">
 <p>Example: sort the apparels by color<br>
 Format: <code>sort color</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="swap-any-two-apparels-code-sort-index_x-index_y-code"><a class="link" href="#swap-any-two-apparels-code-sort-index_x-index_y-code">Swap any two apparels : <code>sort [INDEX_X] [INDEX_Y]</code></a></h3>
+<div class="paragraph">
+<p>Swap the position of two apparels.<br></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>swap 2 5</code><br>
+Swap the position for apparels at index 2 and 5.</p>
 </div>
 </div>
 <div class="sect2">
@@ -858,4 +906,4 @@ e.g. <code>wear 1</code></p>
 <p><em>{Optionally, you may include other projects in your portfolio.}</em></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 10:03:03 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 10:47:52 UTC</div></div></div></body></html>
