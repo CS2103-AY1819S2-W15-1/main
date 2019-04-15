@@ -28,9 +28,9 @@
 <li><a href="#undoing-previous-command-code-undo-code">3.13. Undoing previous command : <code>undo</code></a></li>
 <li><a href="#redoing-the-previously-undone-command-code-redo-code">3.14. Redoing the previously undone command : <code>redo</code></a></li>
 <li><a href="#clearing-all-entries-code-clear-code">3.15. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#recommend-outfit-code-recommendation-code">3.16. Recommend Outfit : <code>recommendation</code></a></li>
-<li><a href="#something-color-select-code-something-color-code">3.17. Something Color Select : <code>something [COLOR]</code></a></li>
-<li><a href="#random-item-type-select-code-random-type-code">3.18. Random Item Type Select : <code>random [TYPE]</code></a></li>
+<li><a href="#recommend-outfit-code-recommendation-code">3.16. Recommend outfit : <code>recommendation</code></a></li>
+<li><a href="#something-color-code-something-color-code">3.17. Something color : <code>something [COLOR]</code></a></li>
+<li><a href="#random-item-type-code-random-type-code">3.18. Random item type : <code>random [TYPE]</code></a></li>
 <li><a href="#calculating-statistics-code-stats-code-or-code-statistics-code">3.19. Calculating statistics : <code>stats</code> or <code>statistics</code></a></li>
 <li><a href="#exiting-the-program-code-exit-code">3.20. Exiting the program : <code>exit</code></a></li>
 <li><a href="#saving-the-data">3.21. Saving the data</a></li>
@@ -39,8 +39,8 @@
 <li><a href="#coming-in-v2-0">4. Coming in v2.0</a>
 <ul class="sectlevel2">
 <li><a href="#know-suitable-apparels-based-on-occasions">4.1. Know suitable apparels based on occasions</a></li>
-<li><a href="#matched-colors">4.2. Matched Colors</a></li>
-<li><a href="#save-favourite-apparels-outfits">4.3. Save Favourite Apparels/Outfits</a></li>
+<li><a href="#matched-colors">4.2. Matched colors</a></li>
+<li><a href="#save-favourite-apparels-outfits">4.3. Save favourite apparels/outfits</a></li>
 </ul>
 </li>
 <li><a href="#faq">5. FAQ</a></li>
@@ -96,8 +96,7 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <p><strong><code>delete</code></strong><code>3</code> : deletes the 3rd apparel shown in the current list</p>
 </li>
 <li>
-<p><strong><code>exit</code></strong> : exits Fashion Match
-`</p>
+<p><strong><code>exit</code></strong> : exits Fashion Match</p>
 </li>
 </ul>
 </div>
@@ -188,10 +187,10 @@ Format: <code>add n/NAME c/COLOR t/CLOTHINGTYPE</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>`add n/Zara Shirt c/Red t/Top</p>
+<p><code>add n/Zara Shirt c/Red t/Top</code></p>
 </li>
 <li>
-<p>`add n/Desigual Tailored Pants c/Grey t/Bottom</p>
+<p><code>add n/Desigual Tailored Pants c/Grey t/Bottom</code></p>
 </li>
 </ul>
 </div>
@@ -631,14 +630,14 @@ Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="recommend-outfit-code-recommendation-code"><a class="link" href="#recommend-outfit-code-recommendation-code">3.16. Recommend Outfit : <code>recommendation</code></a></h3>
+<h3 id="recommend-outfit-code-recommendation-code"><a class="link" href="#recommend-outfit-code-recommendation-code">3.16. Recommend outfit : <code>recommendation</code></a></h3>
 <div class="paragraph">
 <p>Lists a recommended outfit based on what matches in your closet. The matching is done based on what colors match. The matching matrix is displayed below. Green means match and red means not match. The algorithm will search for a random outfit that meets the color requirements. The outfit must have a <code>TOP</code>, <code>BOTTOM</code>, <code>SHOES</code>. If a matching belt exists, an outfit may be recommended with a BELT.<br>
 Format: <code>recommendation</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="something-color-select-code-something-color-code"><a class="link" href="#something-color-select-code-something-color-code">3.17. Something Color Select : <code>something [COLOR]</code></a></h3>
+<h3 id="something-color-code-something-color-code"><a class="link" href="#something-color-code-something-color-code">3.17. Something color : <code>something [COLOR]</code></a></h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/CM.png" alt="CM" width="1000">
@@ -682,7 +681,7 @@ Returns a BLACK apparel from FM.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="random-item-type-select-code-random-type-code"><a class="link" href="#random-item-type-select-code-random-type-code">3.18. Random Item Type Select : <code>random [TYPE]</code></a></h3>
+<h3 id="random-item-type-code-random-type-code"><a class="link" href="#random-item-type-code-random-type-code">3.18. Random item type : <code>random [TYPE]</code></a></h3>
 <div class="paragraph">
 <p>Returns random specified TYPE of apparel from FM.<br>
 Format: <code>random TYPE</code></p>
@@ -786,14 +785,14 @@ There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="matched-colors"><a class="link" href="#matched-colors">4.2. Matched Colors</a></h3>
+<h3 id="matched-colors"><a class="link" href="#matched-colors">4.2. Matched colors</a></h3>
 <div class="paragraph">
 <p>Fashion Match would also be able to establish relations between certain colors so that it will not recommend conflicting colors.<br>
 Examples: red on red, yellow on yellow, etc</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="save-favourite-apparels-outfits"><a class="link" href="#save-favourite-apparels-outfits">4.3. Save Favourite Apparels/Outfits</a></h3>
+<h3 id="save-favourite-apparels-outfits"><a class="link" href="#save-favourite-apparels-outfits">4.3. Save favourite apparels/outfits</a></h3>
 <div class="paragraph">
 <p>Users would be able to save their favourite outfits or apparels so that they can quickly identify their favourite clothes for future use.</p>
 </div>
@@ -854,16 +853,20 @@ e.g. <code>random TOP</code></p>
 <p><strong>Recommendation</strong> : <code>recommendation</code></p>
 </li>
 <li>
-<p><strong>Sort</strong> : <code>sort [OPTION]</code><br>
-e.g. <code>sort color</code></p>
-</li>
-<li>
 <p><strong>Select</strong> : <code>select INDEX</code><br>
 e.g. <code>select 2</code></p>
 </li>
 <li>
 <p><strong>Something</strong> : <code>something COLOR</code><br>
 e.g. <code>something RED</code></p>
+</li>
+<li>
+<p><strong>Sort</strong> : <code>sort [OPTION]</code><br>
+e.g. <code>sort color</code></p>
+</li>
+<li>
+<p><strong>Swap</strong> : <code>swap [INDEX_X] [INDEX_Y]</code><br>
+e.g. <code>swap 2 5</code></p>
 </li>
 <li>
 <p><strong>Stats</strong> : <code>stats</code></p>
@@ -882,4 +885,4 @@ e.g. <code>wear 1</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 16:39:30 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 16:51:51 UTC</div></div></div></body></html>
