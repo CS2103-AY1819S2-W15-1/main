@@ -80,6 +80,7 @@
 <ul class="sectlevel2">
 <li><a href="#launch-and-shutdown">F.1. Launch and Shutdown</a></li>
 <li><a href="#deleting-an-apparel">F.2. Deleting an apparel</a></li>
+<li><a href="#statistics">F.3. Statistics</a></li>
 </ul>
 </li>
 </ul>
@@ -562,9 +563,8 @@ The following class plays an important role at the architecture level:</p>
 <p>Reset apparel status to <code>clean</code> if previously <code>worn</code>.
 Simulating an event in the real world where send your clothes to wash.</p>
 </div>
-<div class="paragraph">
-<p>3.1.1. Current implementation - Wash a single indicated apparel</p>
-</div>
+<div class="sect3">
+<h4 id="current-implementation-wash-a-single-indicated-apparel"><a class="link" href="#current-implementation-wash-a-single-indicated-apparel">3.1.1. Current implementation - Wash a single indicated apparel</a></h4>
 <div class="paragraph">
 <p>The wash command takes in only one parameter:</p>
 </div>
@@ -602,9 +602,9 @@ Simulating an event in the real world where send your clothes to wash.</p>
 <div class="paragraph">
 <p>The CommandResult object that is returned by the wash command lets the user know that the status of the apparel has been reset to <code>clean</code> or that it is already <code>clean</code>.</p>
 </div>
-<div class="paragraph">
-<p>3.1.2. Design Considerations:</p>
 </div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">3.1.2. Design Considerations:</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -628,11 +628,12 @@ Simulating an event in the real world where send your clothes to wash.</p>
 <div class="paragraph">
 <p>Pros: Saves CPU time as it is not commiting to Addressbook. Throws exception instead.</p>
 </div>
-<div class="paragraph">
-<p>3.1.3. Proposed additions for v2.0:</p>
 </div>
+<div class="sect3">
+<h4 id="proposed-additions-for-v2-0"><a class="link" href="#proposed-additions-for-v2-0">3.1.3. Proposed additions for v2.0:</a></h4>
 <div class="paragraph">
 <p>A washAll command to simulate throwing all your dirty clothes into the washing machine.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -641,9 +642,8 @@ Simulating an event in the real world where send your clothes to wash.</p>
 <p>Sets apparel status to <code>worn</code> whether its previous status was <code>clean</code> or <code>worn</code> and increases usage count by one.
 Simulating an event in the real world where throw your worn clothes to the laundry basket</p>
 </div>
-<div class="paragraph">
-<p>3.2.1. Current implementation - Wear a single indicated apparel</p>
-</div>
+<div class="sect3">
+<h4 id="current-implementation-wear-a-single-indicated-apparel"><a class="link" href="#current-implementation-wear-a-single-indicated-apparel">3.2.1. Current implementation - Wear a single indicated apparel</a></h4>
 <div class="paragraph">
 <p>The wear command takes in only one parameter:</p>
 </div>
@@ -681,9 +681,9 @@ Simulating an event in the real world where throw your worn clothes to the laund
 <div class="paragraph">
 <p>The CommandResult object that is returned by the wear command lets the user know that the status of the apparel has been set to <code>worn</code> and returns and random message if the indicated apparel was already <code>worn</code> before command was executed.</p>
 </div>
-<div class="paragraph">
-<p>3.2.2. Design Considerations:</p>
 </div>
+<div class="sect3">
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.2. Design Considerations:</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -704,11 +704,12 @@ Simulating an event in the real world where throw your worn clothes to the laund
 <div class="paragraph">
 <p>Pros: Simulates the real world where people might not have time to wash their clothes due to bad time management and instead throws on the next thing in the wardrobe.</p>
 </div>
-<div class="paragraph">
-<p>3.2.3. Proposed additions for v2.0:</p>
 </div>
+<div class="sect3">
+<h4 id="proposed-additions-for-v2-0-2"><a class="link" href="#proposed-additions-for-v2-0-2">3.2.3. Proposed additions for v2.0:</a></h4>
 <div class="paragraph">
 <p>A wear command that takes in multiple INDEXs to simulate wearing a whole outfit out. e.g. <code>wear 1 2 3</code> to wear Apparel no. 1, 2 and 3.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -740,10 +741,13 @@ Simulating an event in the real world where throw your worn clothes to the laund
 <div class="paragraph">
 <p>Show statistics of the apparels of the current wardrobe.
 ==== Current Implementation
-Below is the UML diagram and a step-by-step explanation of an example scenario for the usage of <code>stats</code>.</p>
+Below is a high level visualisation of the statistics command and a step-by-step explanation of an example scenario for the usage of <code>stats</code>.</p>
 </div>
-<div class="paragraph">
-<p>(UML)</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/HighLevelStatsDiagram.png" alt="HighLevelStatsDiagram" width="800">
+</div>
+<div class="title">Figure 13. High Level Visualisation of Statistics Command</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -763,6 +767,63 @@ Below is the UML diagram and a step-by-step explanation of an example scenario f
 <p>The result will be shown on the UI</p>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p>The following sequence shows how the statistics operation works when called by LogicManager:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/StatisticsCommand.png" alt="StatisticsCommand" width="1000">
+</div>
+<div class="title">Figure 14. Sequence Diagram for Statistics command</div>
+</div>
+<div class="paragraph">
+<p>The following is an activity diagram that sums up the Statistics command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/StatisticsActivityDiagram.png" alt="StatisticsActivityDiagram" width="800">
+</div>
+<div class="title">Figure 15. Activity Diagram for Statistics command</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.6.1. Design Considerations</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Go through all the apparels in Fashion Match and displays statistics whenever the statistics command is called.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: This approach is less intensive on the computational power of the user&#8217;s PC, as the command is only executed whenever the user calls it.</p>
+</li>
+<li>
+<p>Cons: Less user friendly as statistics will not be real-time</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternate 2:</strong> Updates statistics in real-time and whenever the statistics command is used.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: This approach is more user-friendly as users would not need to type <code>stats</code> command after new apparel is changed.</p>
+</li>
+<li>
+<p>Cons: Time-consuming and not scalable. This method could be more computationally more intensive, especially if the user has a large wardrobe.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="proposed-additions-for-v2-0-3"><a class="link" href="#proposed-additions-for-v2-0-3">3.6.2. Proposed additions for v2.0</a></h4>
+<div class="paragraph">
+<p><code>Statistics</code> command will be a real-time feature that captures the state of the user&#8217;s wardrobe and apparel in real-time and does not need to call the <code>Statistics</code> command each time. It will also occupy a dedicated space in the UI.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -870,7 +931,7 @@ Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows y
 <div class="content">
 <img src="images/chrome_save_as_pdf.png" alt="chrome save as pdf" width="300">
 </div>
-<div class="title">Figure 13. Saving documentation as PDF files in Chrome</div>
+<div class="title">Figure 16. Saving documentation as PDF files in Chrome</div>
 </div>
 </div>
 <div class="sect2">
@@ -1731,5 +1792,30 @@ Expected: Similar to previous.</p>
 </ol>
 </div>
 </div>
+<div class="sect2">
+<h3 id="statistics"><a class="link" href="#statistics">F.3. Statistics</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Displays statistics of wardrobe</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: Displays statistics using the <code>statistics</code> command.</p>
+</li>
+<li>
+<p>Test case: <code>stats</code><br>
+Expected: Details of the statistics of the wardrobe is shown in the status message. Timestamp in the status bar is updated.</p>
+</li>
+<li>
+<p>Test case: <code>statistics</code><br>
+Expected: Details of the statistics of the wardrobe is shown in the status message. Timestamp in the status bar is updated.</p>
+</li>
+</ol>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 09:56:59 UTC</div></div></div></body></html>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 10:03:03 UTC</div></div></div></body></html>

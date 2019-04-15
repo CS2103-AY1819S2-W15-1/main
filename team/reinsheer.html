@@ -10,7 +10,7 @@
 <h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Fashion Match is a desktop wardrobe management application used as a guide for your fashion necessities. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 19.7 kLoC.</p>
+<p>Fashion Match is a desktop wardrobe management application used as a guide for your fashion necessities. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is morphed from <a href="https://github.com/nus-cs2103-AY1819S2/addressbook-level4">Address Book</a> over a period of 8 weeks. It is written in Java, and has about 10 kLoC.</p>
 </div>
 </div>
 </div>
@@ -20,42 +20,82 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Major enhancement</strong>: intending to add major statistic command by v1.4</p>
+<p><strong>Major enhancement</strong>: Generate statistics for a user&#8217;s wardrobe via the <code>statistics</code> command.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>What it does: gives basic statistics to user for visualisation purposes, for example he knows his top worn apparel</p>
+<p>What it does: The statistics feature gives basic statistics to the user for visualisation purposes.</p>
 </li>
 <li>
-<p>Justification: This feature improves the product significantly because a user can have greater clarity for his wardrobe and allows the user to be more aware of his usage patterns</p>
+<p>Justification: This feature improves the product significantly because a user can have greater clarity for his wardrobe and allows the user to be more aware of his usage patterns.</p>
 </li>
 <li>
-<p>Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands.</p>
+<p>Highlights: A user is able to tell his top most worn apparel, his favorite color, how clean/dirty his wardrobe is, etc.</p>
+</li>
+<li>
+<p>Code Contributed: [<a href="https://nus-cs2103-ay1819s2.github.io/cs2103-dashboard/#search=reinsheer&amp;sort=displayName&amp;since=2019-02-10&amp;until=2019-04-15&amp;timeframe=day&amp;reverse=false&amp;repoSort=true">RepoSense</a>], [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/pull/139">#139</a>]</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Minor enhancement</strong>: nil</p>
-</li>
+<p><strong>Minor enhancement</strong>: Refactoring the whole of AddressBook to formulate the skeleton of Fashion Match.</p>
+<div class="ulist">
+<ul>
 <li>
-<p><strong>Code contributed</strong>: refactoring and test cases</p>
+<p>Code contributed: [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/pull/45">#45</a>], [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/pull/46">#46</a>], [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/pull/50">#50</a>]</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p><strong>Other contributions</strong>:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Refactored entire AddressBook to become Fashion Match</p>
+<p>Project Management:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Managed release of <code>v1.3</code> and <code>v1.4</code>, reviewed and merged all PRs from week 10 saturday onwards on GitHub.</p>
 </li>
 <li>
-<p>Fix test cases that resulted from the refactoring of AddressBook</p>
+<p>Submitted and ensure weekly deliverables are handed in on time from v1.3 onwards.</p>
 </li>
 <li>
-<p>Managed release of <code>v1.3</code>, reviewed and merged all PRs from week 10 saturday onwards on GitHub</p>
+<p>Allocated and fix bugs that arose from the dry-run Practical Exam.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>Cleanup of the Developer Guide from AddressBook4 to Fashion Match: <a href="https://github.com/CS2103-AY1819S2-W15-1/main/pull/8" class="bare">https://github.com/CS2103-AY1819S2-W15-1/main/pull/8</a></p>
+<p>Enhancement to Existing Features:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Refactored AddressBook to Fashion Match: [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/pull/45">#45</a>], [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/pull/46">#46</a>], [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/pull/94">#94</a>]</p>
+</li>
+<li>
+<p>Fix test cases that resulted from the refactoring of AddressBook: [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/pull/89">#89</a>], [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/pull/91">#91</a>], [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/pull/50">#50</a>]</p>
+</li>
+<li>
+<p>Cleanup of the Developer Guide from AddressBook4 to Fashion Match: [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/pull/8">#8</a>], [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/pull/99">#99</a>]</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Documentation:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Documented new statistics feature in UG and DG: [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/pull/139">#139</a>], [<a href="https://github.com/CS2103-AY1819S2-W15-1/main/pull/166">#166</a>]</p>
+</li>
+<li>
+<p>Added Use Cases, User Stories and Non-Functional Requirements for DG.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -77,6 +117,46 @@
 </tr>
 </tbody>
 </table>
+<div class="sect2">
+<h3 id="calculating-statistics-code-stats-code-or-code-statistics-code"><a class="link" href="#calculating-statistics-code-stats-code-or-code-statistics-code">Calculating statistics : <code>stats</code> or <code>statistics</code></a></h3>
+<div class="paragraph">
+<p>Gives an overview of the various statistics of the apparels/wardrobe.<br>
+Format: <code>stats</code> or <code>statistics</code></p>
+</div>
+<div class="paragraph">
+<p>Typing <code>stats</code> or <code>statistics</code> will give you the following several information about your wardrobe:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Your favorite apparel</p>
+</li>
+<li>
+<p>Your favorite color</p>
+</li>
+<li>
+<p>Total number of apparel in wardrobe</p>
+</li>
+<li>
+<p>Total number of different colored apparels</p>
+</li>
+<li>
+<p>Your least favorite apparel (a reminder for you to wear them more often!)</p>
+</li>
+<li>
+<p>How clean or dirty is your wardrobe</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>An example output is shown in the screenshot below:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/stats.png" alt="stats" width="790">
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -92,8 +172,95 @@
 </tr>
 </tbody>
 </table>
+<div class="sect2">
+<h3 id="statistics-feature"><a class="link" href="#statistics-feature">Statistics feature</a></h3>
 <div class="paragraph">
-<p>Entire structure in v1.1</p>
+<p>Show statistics of the apparels of the current wardrobe.
+==== Current Implementation
+Below is a high level visualisation of the statistics command and a step-by-step explanation of an example scenario for the usage of <code>stats</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/HighLevelStatsDiagram.png" alt="HighLevelStatsDiagram" width="800">
+</div>
+<div class="title">Figure 1. High Level Visualisation of Statistics Command</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User enters command <code>stats</code>. The command is received by <code>FashionMatchParser</code>, which then creates a <code>StatisticsCommandParser</code> object.</p>
+</li>
+<li>
+<p><code>StatisticsCommandParser</code> will then create a relevant <code>Statistic</code> object.</p>
+</li>
+<li>
+<p>After that, a <code>StatisticsCommand</code> object is created with the <code>Statistic</code> object as parameter and return to <code>LogicManager</code>.</p>
+</li>
+<li>
+<p><code>LogicManager</code> then calls <code>StatisticsCommand.execute()</code>, which calls <code>Model.getFavApparel()</code>, <code>Model.getFavColor()</code>, <code>Model.getFilteredApparelList().size()</code>, <code>Model.getTotalColor</code>, <code>Model.getLeastFavApparel</code> and <code>Model.getCleanOrDirty</code>.</p>
+</li>
+<li>
+<p>The result will be shown on the UI</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following sequence shows how the statistics operation works when called by LogicManager:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/StatisticsCommand.png" alt="StatisticsCommand" width="1000">
+</div>
+<div class="title">Figure 2. Sequence Diagram for Statistics command</div>
+</div>
+<div class="paragraph">
+<p>The following is an activity diagram that sums up the Statistics command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/StatisticsActivityDiagram.png" alt="StatisticsActivityDiagram" width="800">
+</div>
+<div class="title">Figure 3. Activity Diagram for Statistics command</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Go through all the apparels in Fashion Match and displays statistics whenever the statistics command is called.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: This approach is less intensive on the computational power of the user&#8217;s PC, as the command is only executed whenever the user calls it.</p>
+</li>
+<li>
+<p>Cons: Less user friendly as statistics will not be real-time</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternate 2:</strong> Updates statistics in real-time and whenever the statistics command is used.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: This approach is more user-friendly as users would not need to type <code>stats</code> command after new apparel is changed.</p>
+</li>
+<li>
+<p>Cons: Time-consuming and not scalable. This method could be more computationally more intensive, especially if the user has a large wardrobe.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 09:56:59 UTC</div></div></div></body></html>
+<div class="sect3">
+<h4 id="proposed-additions-for-v2-0"><a class="link" href="#proposed-additions-for-v2-0">Proposed additions for v2.0</a></h4>
+<div class="paragraph">
+<p><code>Statistics</code> command will be a real-time feature that captures the state of the user&#8217;s wardrobe and apparel in real-time and does not need to call the <code>Statistics</code> command each time. It will also occupy a dedicated space in the UI.</p>
+</div>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 10:03:03 UTC</div></div></div></body></html>
