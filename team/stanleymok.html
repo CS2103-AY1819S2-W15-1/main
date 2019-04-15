@@ -20,26 +20,36 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Major enhancement</strong>: added <strong>the ability to make available and unavailable certain apparel, or the ability to wash and dirty certain apparel</strong>, where available and wash keywords can be used interchangebly like unavailable and dirty.</p>
+<p><strong>Major enhancement</strong>: added <strong>the ability to make wash and wear certain apparels</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>What it does: allows the user to change an apparel&#8217;s availability status, whether it should be dirty or clean.</p>
+<p>What it does: allows the user to indicate whether an apparel&#8217;s is clean or worn.</p>
 </li>
 <li>
-<p>Justification: This feature improves the product significantly because it similates the wardrobe&#8217;s laundry basket; if available, it is clean and has not been worn; if unavailable, it similates a dirty apparel in the laundry basket.</p>
+<p>Justification: This feature improves the product significantly because it similates the wardrobe and the laundry basket; if clean, it is hanging clean and has not been worn; if worn, it has been put in the laundry basket.</p>
 </li>
 <li>
-<p>Highlights: This enhancement affects existing commands like the recommendation class of commands and commands to be added in future. It required an in-depth analysis of the n-level design architecture in ab4. The implementation too was challenging as it required changes to existing commands, and is modelled after the EditCommand.java class.</p>
+<p>Highlights: This enhancement affects existing commands like the recommendation class of commands and the statistics commands. It required an in-depth analysis of the n-level design architecture in ab4. The implementation too was challenging as it required changes to existing commands, and is modelled after the EditCommand.java class.</p>
 </li>
 <li>
-<p>Credits: <em>none</em>, as i simply had to model the AvailableCommand.java and UnavailableCommand.java classes after EditCommand.java class</p>
+<p>Credits: <em>none</em>, as i simply had to model the WashCommand.java and WearCommand.java classes after EditCommand.java class</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Minor enhancement</strong>: Enabled alternative, more intuitive command words to be used in place of available and unavailable: <strong>wash</strong> and <strong>dirty</strong>.</p>
+<p><strong>Minor enhancement</strong>: Learnt CSS and HTML for CS2103 to take charge of the UI Design aspect. Raffles did the back-end code, i was in charge of user experience. I did the front end, adjusting the fonts and the anchorpane settings, and choosing the right colours finding the right hexcode values for our app.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Used photoshop skills to remove background white image from jpg image. Resized images. Did this for all 64 of tops, bottoms, belts, and shoes images in the our resources/images folder. Tedious work but worth it.</p>
+</li>
+<li>
+<p>Commissioned my artist friend to do the default image seen when Fashion Match first loads up. Titled firstpage.png in resources/image folder.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p><strong>Code contributed</strong>:</p>
@@ -47,22 +57,22 @@
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Available command</strong>: <a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/main/java/seedu/address/logic/commands/AvailableCommand.java">Functional code</a></p>
+<p><strong>Wash command</strong>: <a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/main/java/seedu/address/logic/commands/WashCommand.java">Functional code</a></p>
 </div>
 <div class="paragraph">
-<p><strong>Unavailable command</strong>: <a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/main/java/seedu/address/logic/commands/UnavailableCommand.java">Functional code</a></p>
+<p><strong>Wear command</strong>: <a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/main/java/seedu/address/logic/commands/WearCommand.java">Functional code</a></p>
 </div>
 <div class="paragraph">
-<p><strong>Parser</strong> for available command: <a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/main/java/seedu/address/logic/parser/AvailableCommandParser.java">Functional code</a></p>
+<p><strong>Parser</strong> for available command: <a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/main/java/seedu/address/logic/parser/WashCommandParser.java">Functional code</a></p>
 </div>
 <div class="paragraph">
-<p><strong>Parser</strong> for unavailable command: <a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/main/java/seedu/address/logic/parser/UnavailableCommandParser.java">Functional code</a></p>
+<p><strong>Parser</strong> for unavailable command: <a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/main/java/seedu/address/logic/parser/WearCommandParser.java">Functional code</a></p>
 </div>
 <div class="paragraph">
-<p><strong>Available</strong> command test: <a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/main/java/seedu/address/logic/commands/AvailableCommand.java">Test code</a></p>
+<p><strong>Wash</strong> command test: <a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/main/java/seedu/address/logic/commands/WashCommand.java">Test code</a></p>
 </div>
 <div class="paragraph">
-<p><strong>Unavailable</strong> command test: <a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/test/java/seedu/address/logic/commands/UnavailableCommandTest.java">Test code</a></p>
+<p><strong>Wear</strong> command test: <a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/test/java/seedu/address/logic/commands/WearCommandTest.java">Test code</a></p>
 </div>
 <div class="paragraph">
 <p><strong>Stub</strong> class: <a href="https://github.com/CS2103-AY1819S2-W15-1/main/blob/master/src/test/java/seedu/address/logic/commands/CommandTestUtilExtra.java">Test code</a></p>
@@ -122,7 +132,7 @@
 <p>PRs reviewed (with non-trivial review comments): <a href="https://github.com/CS2103-AY1819S2-W15-1/main/pull/59">#6</a></p>
 </li>
 <li>
-<p>Reported bugs and suggestions for other teams in the class (examples: )</p>
+<p>Reported bugs and suggestions for other teams in the class: <a href="https://github.com/cs2103-ay1819s2-w11-4/main/issues/128">#7</a> <a href="https://github.com/cs2103-ay1819s2-w11-4/main/issues/118">#8</a> <a href="https://github.com/cs2103-ay1819s2-w11-4/main/issues/114">#9</a> <a href="https://github.com/cs2103-ay1819s2-w11-4/main/issues/124">#10</a></p>
 </li>
 </ul>
 </div>
@@ -184,17 +194,33 @@ Format: <code>wash INDEX</code> or <code>available INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>wash 1</code><br>
-Makes available the 1st apparel in the list if it was worn.</p>
+<p><code>wash 5</code><br>
+Resets cleanliness status of the fifth apparel in the list if it was worn.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/washWornBefore.jpg" alt="washWornBefore" width="790">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/washWornAfter.jpg" alt="washWornAfter" width="790">
+</div>
+</div>
 </li>
 <li>
-<p><code>available 2</code><br>
-Does nothing if the 2nd apparel in the list is already clean.</p>
+<p><code>wash 5</code><br>
+Does not allow cleaning if the fifth apparel in the list is already clean.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/washClean.jpg" alt="washClean" width="790">
+</div>
+</div>
+<div class="paragraph">
+<p>=== Wearing a piece of apparel : <code>wear</code> or <code>unavailable</code></p>
+</div>
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="wearing-a-piece-of-apparel-code-wear-code-or-code-unavailable-code"><a class="link" href="#wearing-a-piece-of-apparel-code-wear-code-or-code-unavailable-code">Wearing a piece of apparel : <code>wear</code> or <code>unavailable</code></a></h3>
 <div class="paragraph">
 <p>Makes an existing apparel in FM worn and increases times worn by 1.<br>
 Format: <code>wash INDEX</code> or <code>unavailable INDEX</code></p>
@@ -213,6 +239,9 @@ Format: <code>wash INDEX</code> or <code>unavailable INDEX</code></p>
 <p>Feedback message gently advices you to not be a dirty bum if you wear a worn apparel even if its belts or shoes.</p>
 </li>
 <li>
+<p>Random message guilting you for being dirty is shown to user.</p>
+</li>
+<li>
 <p>Increases the 'Times Worn' counter by 1.</p>
 </li>
 <li>
@@ -228,20 +257,41 @@ Format: <code>wash INDEX</code> or <code>unavailable INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>wear 1</code><br>
-Makes worn the 1st apparel in the list.
+<p><code>wear 5</code><br>
+Sets status of the fifth apparel in the list to 'Worn'.
 Increases its times worn by 1.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/wearCleanBefore.jpg" alt="wearCleanBefore" width="790">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/wearCleanAfter.jpg" alt="wearCleanAfter" width="790">
+</div>
+</div>
 </li>
 <li>
-<p><code>unavailable 2</code><br>
-Makes available the 2nd apparel in the list.
-Increases its times worn by 1.</p>
+<p><code>wear 5</code><br>
+Sets status of the fifth apparel in the list to 'Worn' even if it&#8217;s already worn.
+Increases its times worn by 1.
+One of the seven random messages shown below.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/wearAgainBefore.jpg" alt="wearAgainBefore" width="790">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/wearAgainAfter.jpg" alt="wearAgainAfter" width="790">
+</div>
+</div>
+<div class="paragraph">
+<p>=== Locating apparels by name: <code>find</code></p>
+</div>
 </li>
 </ul>
 </div>
-</div>
-<div class="sect2">
-<h3 id="locating-apparels-by-name-code-find-code"><a class="link" href="#locating-apparels-by-name-code-find-code">Locating apparels by name: <code>find</code></a></h3>
 <div class="paragraph">
 <p>Finds apparels whose names contain any of the given keywords.<br>
 Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
@@ -283,7 +333,6 @@ Returns <code>zara</code> and <code>Zara</code></p>
 Returns any apparel having names <code>Zara</code>, <code>Uniqlo</code> or <code>Shirt</code>.</p>
 </li>
 </ul>
-</div>
 </div>
 <div class="sect2">
 <h3 id="deleting-an-apparel-code-delete-code"><a class="link" href="#deleting-an-apparel-code-delete-code">Deleting an apparel : <code>delete</code></a></h3>
@@ -737,6 +786,9 @@ Format: <code>wash INDEX</code> or <code>unavailable INDEX</code></p>
 <p>Feedback message gently advices you to not be a dirty bum if you wear a worn apparel even if its belts or shoes.</p>
 </li>
 <li>
+<p>Random message guilting you for being dirty is shown to user.</p>
+</li>
+<li>
 <p>Increases the 'Times Worn' counter by 1.</p>
 </li>
 <li>
@@ -752,19 +804,41 @@ Format: <code>wash INDEX</code> or <code>unavailable INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>wear 1</code><br>
-Makes worn the 1st apparel in the list.
+<p><code>wear 5</code><br>
+Sets status of the fifth apparel in the list to 'Worn'.
 Increases its times worn by 1.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/wearCleanBefore.jpg" alt="wearCleanBefore" width="790">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/wearCleanAfter.jpg" alt="wearCleanAfter" width="790">
+</div>
+</div>
 </li>
 <li>
-<p><code>unavailable 2</code><br>
-Makes available the 2nd apparel in the list.
-Increases its times worn by 1.</p>
+<p><code>wear 5</code><br>
+Sets status of the fifth apparel in the list to 'Worn' even if it&#8217;s already worn.
+Increases its times worn by 1.
+One of the seven random messages shown below.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/wearAgainBefore.jpg" alt="wearAgainBefore" width="790">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/wearAgainAfter.jpg" alt="wearAgainAfter" width="790">
+</div>
+</div>
+<div class="paragraph">
+<p>=== Locating apparels by name: <code>find</code></p>
+</div>
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="locating-apparels-by-name-code-find-code-2"><a class="link" href="#locating-apparels-by-name-code-find-code-2">Locating apparels by name: <code>find</code></a></h3>
 <div class="paragraph">
 <p>Finds apparels whose names contain any of the given keywords.<br>
 Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
@@ -806,7 +880,6 @@ Returns <code>zara</code> and <code>Zara</code></p>
 Returns any apparel having names <code>Zara</code>, <code>Uniqlo</code> or <code>Shirt</code>.</p>
 </li>
 </ul>
-</div>
 </div>
 <div class="sect2">
 <h3 id="deleting-an-apparel-code-delete-code-2"><a class="link" href="#deleting-an-apparel-code-delete-code-2">Deleting an apparel : <code>delete</code></a></h3>
@@ -1256,12 +1329,155 @@ e.g. <code>wear 1</code></p>
 <div class="paragraph">
 <p>Wash command:
 === Wash feature
-Set availability status to clean.
-==== Current Implementation
-<em>{More to be added}</em></p>
+Reset apparel status to <code>clean</code> if previously <code>worn</code>.
+Simulating an event in the real world where send your clothes to wash.</p>
 </div>
 <div class="paragraph">
-<p>Wear command:</p>
+<p>3.1.1. Current implementation - Wash a single indicated apparel</p>
+</div>
+<div class="paragraph">
+<p>The wash command takes in only one parameter:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Index: Index number of an apparel in filtered/unfiltered list. Only positive numbers present in list are valid.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>e.g <code>wash 1</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/HighLevelWashDiagram.png" alt="HighLevelWashDiagram" width="800">
+</div>
+<div class="title">Figure 1. High Level Visualisation of Wash Command</div>
+</div>
+<div class="paragraph">
+<p>When the user inputs the wash command in the CLI, the input is parsed, and the index of the apparel specified are tokenized and extracted.</p>
+</div>
+<div class="paragraph">
+<p><code>wash</code> keyword will call a constructor for WashCommandParser to parse the <code>index</code>, 1, creating a WashCommand for LogicManager.</p>
+</div>
+<div class="paragraph">
+<p>LogicManager executes WashCommand which calls Model to set the apparel in the list to <code>clean</code>, and commits the changes to Storage.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/washCommand.jpg" alt="washCommand" width="800">
+</div>
+<div class="title">Figure 2. Sequence Diagram for Wash command</div>
+</div>
+<div class="paragraph">
+<p>The CommandResult object that is returned by the wash command lets the user know that the status of the apparel has been reset to <code>clean</code> or that it is already <code>clean</code>.</p>
+</div>
+<div class="paragraph">
+<p>3.1.2. Design Considerations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternate command word: <code>available 1</code> works the same and is identical to <code>wash 1</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Pros: Gives the user a choice and a more intuitive approach to wardrobe management</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Input: Not allowing user to wash an already-clean Apparel again.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Pros: Reminds the user that his apparel is already clean if user absentminded types command.</p>
+</div>
+<div class="paragraph">
+<p>Pros: Saves CPU time as it is not commiting to Addressbook. Throws exception instead.</p>
+</div>
+<div class="paragraph">
+<p>3.1.3. Proposed additions for v2.0:</p>
+</div>
+<div class="paragraph">
+<p>A washAll command to simulate throwing all your dirty clothes into the washing machine.</p>
+</div>
+<div class="paragraph">
+<p>Wear command:
+=== Wear feature
+Sets apparel status to <code>worn</code> whether its previous status was <code>clean</code> or <code>worn</code> and increases usage count by one.
+Simulating an event in the real world where throw your worn clothes to the laundry basket</p>
+</div>
+<div class="paragraph">
+<p>3.2.1. Current implementation - Wear a single indicated apparel</p>
+</div>
+<div class="paragraph">
+<p>The wear command takes in only one parameter:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Index: Index number of an apparel in filtered/unfiltered list. Only positive numbers present in list are valid.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>e.g <code>wear 1</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/HighLevelWearDiagram.png" alt="HighLevelWearDiagram" width="800">
+</div>
+<div class="title">Figure 3. High Level Visualisation of Wear Command</div>
+</div>
+<div class="paragraph">
+<p>When the user inputs the wash command in the CLI, the input is parsed, and the index of the apparel specified are tokenized and extracted.</p>
+</div>
+<div class="paragraph">
+<p><code>wear</code> keyword will call a constructor for WearCommandParser to parse the <code>index</code>, 1, creating a WearCommand for LogicManager.</p>
+</div>
+<div class="paragraph">
+<p>LogicManager executes WashCommand which calls Model to set the apparel in the list to <code>worn</code>, and commits the changes to the Apparel to Storage.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/wearCommand.jpg" alt="wearCommand" width="800">
+</div>
+<div class="title">Figure 4. Sequence Diagram for Wear command</div>
+</div>
+<div class="paragraph">
+<p>The CommandResult object that is returned by the wear command lets the user know that the status of the apparel has been set to <code>worn</code> and returns and random message if the indicated apparel was already <code>worn</code> before command was executed.</p>
+</div>
+<div class="paragraph">
+<p>3.2.2. Design Considerations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternate command word: <code>unavailable 1</code> works the same and is identical to <code>wash 1</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Pros: Gives the user a choice and a more intuitive approach to wardrobe management</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Input: Allowing user to wear an already-clean Apparel again.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Pros: Simulates the real world where people might not have time to wash their clothes due to bad time management and instead throws on the next thing in the wardrobe.</p>
+</div>
+<div class="paragraph">
+<p>3.2.3. Proposed additions for v2.0:</p>
+</div>
+<div class="paragraph">
+<p>A wear command that takes in multiple INDEXs to simulate wearing a whole outfit out. e.g. <code>wear 1 2 3</code> to wear Apparel no. 1, 2 and 3.</p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-14 18:18:54 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 00:03:28 UTC</div></div></div></body></html>
