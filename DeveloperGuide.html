@@ -32,11 +32,12 @@
 <li><a href="#wash-feature">3.1. Wash feature</a></li>
 <li><a href="#wear-feature">3.2. Wear feature</a></li>
 <li><a href="#sort-apparel-feature">3.3. Sort Apparel feature</a></li>
-<li><a href="#recommendation-clothes-feature">3.4. Recommendation Clothes feature</a></li>
-<li><a href="#random-select-feature">3.5. Random Select feature</a></li>
-<li><a href="#statistics-feature">3.6. Statistics feature</a></li>
-<li><a href="#logging">3.7. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.8. Configuration</a></li>
+<li><a href="#sort-apparel-feature-2">3.4. Sort Apparel feature</a></li>
+<li><a href="#recommendation-clothes-feature">3.5. Recommendation Clothes feature</a></li>
+<li><a href="#random-select-feature">3.6. Random Select feature</a></li>
+<li><a href="#statistics-feature">3.7. Statistics feature</a></li>
+<li><a href="#logging">3.8. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.9. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a>
@@ -715,13 +716,75 @@ Simulating an event in the real world where throw your worn clothes to the laund
 <div class="sect2">
 <h3 id="sort-apparel-feature"><a class="link" href="#sort-apparel-feature">3.3. Sort Apparel feature</a></h3>
 <div class="paragraph">
-<p>Sort the list of items.
-==== Current Implementation
-<em>{More to be added}</em></p>
+<p>Sort the list of items based on the options given. The sorting will be increasing order of the name of the option specified.
+Simulating an event in the real world where users arrange their wardrobe according to the category of their choice. For example, in a wardrobe where the folded shirts and pants are stacked on top of one another, the user might want to put all the shirts on top of all the pants.</p>
+</div>
+<div class="sect3">
+<h4 id="current-implementation"><a class="link" href="#current-implementation">3.3.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>The sort command takes in one parameter. The valid arguments are: NAME, COLOR, and TYPE.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Name  : The full name of the apparel.</p>
+</li>
+<li>
+<p>Color : The color of the apparel.</p>
+</li>
+<li>
+<p>Type  : The clothing type of the apparel.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>e.g <code>sort color</code> will sort the apparels by color. If there are only 3 colors - Red, Black, Blue - in the wardrobe, calling <code>sort color</code> will arrange all the apparels in the following color starting from top - Black, Blue, Red.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/HighLevelSortDiagram.png" alt="HighLevelSortDiagram" width="800">
+</div>
+<div class="title">Figure 13. High Level Visualisation of Sort Command</div>
+</div>
+<div class="paragraph">
+<p>When the user inputs the sort command in the CLI, the input is parsed, and the sorting option specified are validated.</p>
+</div>
+<div class="paragraph">
+<p><code>sort</code> keyword will call a constructor for SortCommandParser to parse the sort option, <strong>color</strong>, creating a SortCommand for LogicManager.</p>
+</div>
+<div class="paragraph">
+<p>LogicManager executes SortCommand which calls Model to sort the apparels in the list by color, and commits the changes to Storage.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="recommendation-clothes-feature"><a class="link" href="#recommendation-clothes-feature">3.4. Recommendation Clothes feature</a></h3>
+<h3 id="sort-apparel-feature-2"><a class="link" href="#sort-apparel-feature-2">3.4. Sort Apparel feature</a></h3>
+<div class="paragraph">
+<p>Swap any two apparels.
+Simulating an event in the real world where users swap the position of two apparels.</p>
+</div>
+<div class="sect3">
+<h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">3.4.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>The swap command takes in two parameters: INDEX_A and INDEX_B</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Index_A  : The first apparel to be swapped.</p>
+</li>
+<li>
+<p>Index_B : The second apparel to be swapped.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>e.g <code>swap 2 5</code> will swap the apparels at index 2 and 5.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="recommendation-clothes-feature"><a class="link" href="#recommendation-clothes-feature">3.5. Recommendation Clothes feature</a></h3>
 <div class="paragraph">
 <p>Recommend clothing item based on color matching as well as type of clothing.
 ==== Current Implementation
@@ -729,7 +792,7 @@ Simulating an event in the real world where throw your worn clothes to the laund
 </div>
 </div>
 <div class="sect2">
-<h3 id="random-select-feature"><a class="link" href="#random-select-feature">3.5. Random Select feature</a></h3>
+<h3 id="random-select-feature"><a class="link" href="#random-select-feature">3.6. Random Select feature</a></h3>
 <div class="paragraph">
 <p>Random TYPE, and Something Color method. They return random items of selected color and type.
 ==== Current Implementation
@@ -737,7 +800,7 @@ Simulating an event in the real world where throw your worn clothes to the laund
 </div>
 </div>
 <div class="sect2">
-<h3 id="statistics-feature"><a class="link" href="#statistics-feature">3.6. Statistics feature</a></h3>
+<h3 id="statistics-feature"><a class="link" href="#statistics-feature">3.7. Statistics feature</a></h3>
 <div class="paragraph">
 <p>Show statistics of the apparels of the current wardrobe.
 ==== Current Implementation
@@ -747,7 +810,7 @@ Below is a high level visualisation of the statistics command and a step-by-step
 <div class="content">
 <img src="images/HighLevelStatsDiagram.png" alt="HighLevelStatsDiagram" width="800">
 </div>
-<div class="title">Figure 13. High Level Visualisation of Statistics Command</div>
+<div class="title">Figure 14. High Level Visualisation of Statistics Command</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -775,7 +838,7 @@ Below is a high level visualisation of the statistics command and a step-by-step
 <div class="content">
 <img src="images/StatisticsCommand.png" alt="StatisticsCommand" width="1000">
 </div>
-<div class="title">Figure 14. Sequence Diagram for Statistics command</div>
+<div class="title">Figure 15. Sequence Diagram for Statistics command</div>
 </div>
 <div class="paragraph">
 <p>The following is an activity diagram that sums up the Statistics command:</p>
@@ -784,10 +847,10 @@ Below is a high level visualisation of the statistics command and a step-by-step
 <div class="content">
 <img src="images/StatisticsActivityDiagram.png" alt="StatisticsActivityDiagram" width="800">
 </div>
-<div class="title">Figure 15. Activity Diagram for Statistics command</div>
+<div class="title">Figure 16. Activity Diagram for Statistics command</div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.6.1. Design Considerations</a></h4>
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.7.1. Design Considerations</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -820,21 +883,21 @@ Below is a high level visualisation of the statistics command and a step-by-step
 </div>
 </div>
 <div class="sect3">
-<h4 id="proposed-additions-for-v2-0-3"><a class="link" href="#proposed-additions-for-v2-0-3">3.6.2. Proposed additions for v2.0</a></h4>
+<h4 id="proposed-additions-for-v2-0-3"><a class="link" href="#proposed-additions-for-v2-0-3">3.7.2. Proposed additions for v2.0</a></h4>
 <div class="paragraph">
 <p><code>Statistics</code> command will be a real-time feature that captures the state of the user&#8217;s wardrobe and apparel in real-time and does not need to call the <code>Statistics</code> command each time. It will also occupy a dedicated space in the UI.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.7. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.8. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.8, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.9, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -865,7 +928,7 @@ Below is a high level visualisation of the statistics command and a step-by-step
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.8. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.9. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -931,7 +994,7 @@ Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows y
 <div class="content">
 <img src="images/chrome_save_as_pdf.png" alt="chrome save as pdf" width="300">
 </div>
-<div class="title">Figure 16. Saving documentation as PDF files in Chrome</div>
+<div class="title">Figure 17. Saving documentation as PDF files in Chrome</div>
 </div>
 </div>
 <div class="sect2">
@@ -1818,4 +1881,4 @@ Expected: Details of the statistics of the wardrobe is shown in the status messa
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 10:47:52 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 16:24:04 UTC</div></div></div></body></html>
